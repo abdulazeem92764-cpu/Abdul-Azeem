@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AZ WhatsApp AI Agent</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-header">
+            <div class="logo">
+                <span>AZ</span>
+                WhatsApp Agent
+            </div>
+
+            <button id="agentToggle" class="agent-toggle active">
+                AI ON
+            </button>
+        </div>
+
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchContact"
+                placeholder="Search chats..."
+            >
+        </div>
+
+
+        <div class="contacts" id="contactList">
+
+            <div
+                class="contact active"
+                data-name="Ali"
+                data-phone="+92 300 1234567"
+            >
+                <div class="avatar">A</div>
+
+                <div class="contact-info">
+                    <h4>Ali</h4>
+                    <p>Hello bro</p>
+                </div>
+
+                <span class="time">12:30</span>
+            </div>
+
+
+            <div
+                class="contact"
+                data-name="Ahmed"
+                data-phone="+92 301 9876543"
+            >
+                <div class="avatar">AH</div>
+
+                <div class="contact-info">
+                    <h4>Ahmed</h4>
+                    <p>Website price?</p>
+                </div>
+
+                <span class="time">11:20</span>
+            </div>
+
+
+            <div
+                class="contact"
+                data-name="Client"
+                data-phone="+92 333 5555555"
+            >
+                <div class="avatar">C</div>
+
+                <div class="contact-info">
+                    <h4>Client</h4>
+                    <p>I need a website</p>
+                </div>
+
+                <span class="time">10:10</span>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- CHAT AREA -->
+
+    <main class="chat-area">
+
+        <div class="chat-header">
+
+            <div class="user-details">
+
+                <div class="avatar big" id="headerAvatar">
+                    A
+                </div>
+
+                <div>
+                    <h3 id="chatName">Ali</h3>
+
+                    <p>
+                        <span class="online-dot"></span>
+                        AI Agent Active
+                    </p>
+                </div>
+
+            </div>
+
+
+            <button class="settings-btn" id="settingsBtn">
+                ⚙
+            </button>
+
+        </div>
+
+
+
+        <div class="messages" id="messages">
+
+            <div class="message received">
+                Hello
+                <span>12:30</span>
+            </div>
+
+
+            <div class="message received">
+                Ap website banate ho?
+                <span>12:31</span>
+            </div>
+
+
+            <div class="message sent">
+                Ji bilkul! 😊 Main websites develop karta hoon.
+                Aap kis type ki website banana chahte hain?
+                <span>12:31 ✓✓</span>
+            </div>
+
+        </div>
+
+
+
+        <!-- Typing -->
+
+        <div class="typing" id="typing">
+            AI Agent is typing...
+        </div>
+
+
+
+        <!-- MESSAGE INPUT -->
+
+        <div class="message-input">
+
+            <button class="emoji-btn">😊</button>
+
+            <input
+                type="text"
+                id="messageInput"
+                placeholder="Type a message..."
+            >
+
+            <button id="sendBtn" class="send-btn">
+                ➤
+            </button>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- RIGHT PANEL -->
+
+    <aside class="agent-panel">
+
+        <h2>AI Agent</h2>
+
+        <div class="agent-status">
+
+            <div class="status-icon">
+                🤖
+            </div>
+
+            <h3>AZ Assistant</h3>
+
+            <p>
+                Automatically replying to customers
+            </p>
+
+            <span class="status">
+                ● Online
+            </span>
+
+        </div>
+
+
+
+        <div class="stats">
+
+            <div class="stat">
+                <h3 id="totalReplies">24</h3>
+                <p>AI Replies</p>
+            </div>
+
+            <div class="stat">
+                <h3>12</h3>
+                <p>Customers</p>
+            </div>
+
+        </div>
+
+
+
+        <div class="agent-settings">
+
+            <h3>Agent Settings</h3>
+
+
+            <label>
+                <span>Auto Reply</span>
+
+                <input
+                    type="checkbox"
+                    id="autoReply"
+                    checked
+                >
+            </label>
+
+
+            <label>
+                <span>Welcome Message</span>
+
+                <input
+                    type="checkbox"
+                    id="welcomeMessage"
+                    checked
+                >
+            </label>
+
+
+            <label>
+                <span>Business Mode</span>
+
+                <input
+                    type="checkbox"
+                    id="businessMode"
+                    checked
+                >
+            </label>
+
+        </div>
+
+
+
+        <div class="quick-replies">
+
+            <h3>Quick Replies</h3>
+
+            <button data-message="Assalamualaikum! Aap ki kya help kar sakta hoon?">
+                Welcome
+            </button>
+
+            <button data-message="Website ki price project requirements par depend karti hai.">
+                Price
+            </button>
+
+            <button data-message="Ji bilkul, hum website development service provide karte hain.">
+                Services
+            </button>
+
+        </div>
+
+    </aside>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
